@@ -1,0 +1,176 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) and (max-height: 570px) {
+    .hero .right {
+        display: none;
+    }
+} */
+
+@media (max-width: 345.98px) {
+    .about-me-personal {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    :root {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        width: 99%;
+    }
+
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero .left {
+        order: 2;
+        flex-direction: row;
+        margin: 2.5rem auto;
+    }
+
+    .hero .left a {
+        font-size: 1rem;
+        color: var(--bs-light);
+        margin: auto 1rem;
+    }
+
+    .hero .center {
+        order: 1
+    }
+
+    .hero .right {
+        order: 3;
+        height: 0;
+        font-size: 0;
+        margin-top: 5rem;
+    }
+
+    .hero .right::after {
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    :root {
+        font-size: .9rem;
+    }
+
+    .mobile-btn {
+        display: block;
+        height: auto;
+        position: relative;
+    }
+/* .mobile-btn::after {
+    content: "";
+    display: block;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.5rem;
+    position: absolute;
+    border-width: .5rem;
+    border-style: solid;
+    border-color: #20c997 transparent transparent transparent;
+    opacity: 0;
+}
+
+.to-bottom::after {
+    animation: toBottom .4s forwards;
+}
+
+.to-top::after {
+    animation: toTop .4s forwards;
+} */
+
+    @keyframes toBottom {
+        from {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes toTop {
+        from {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+
+
+    }
+
+    .mobile-btn span {
+        margin: .2rem auto;
+        display: block;
+        width: 1.5rem;
+        height: .1rem;
+        border-radius: 1rem;
+        background-color: #20c997;
+        transition: .4s;
+    }
+
+    /* .mobile-btn .bar-1-mini {
+        width: 1.4rem;
+    } */
+
+    .mobile-btn .bar-2-mini {
+        width: 1.3rem;
+    }
+
+    /* .mobile-btn .bar-3-mini {
+        width: 1.2rem;
+    } */
+
+    .main-nav {
+        height: 0;
+        width: 100%;
+        transition: .4s;
+        overflow: hidden;
+    }
+
+    .main-nav-extend {
+        height: 8rem;
+    }
+
+    .main-nav ul,
+    .main-nav ul li:nth-child(n+2) {
+        padding-top: 1rem;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .about-logo {
+        display: none;
+    }
+
+    .contact .side {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* XX-Large devices (larger desktops) */
+/* No media query since the xxl breakpoint has no upper bound on its width */
