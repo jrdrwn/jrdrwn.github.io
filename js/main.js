@@ -1,8 +1,5 @@
 document.querySelector(".mobile-btn").addEventListener("click", function () {
-    // this.classList.toggle("to-top")
-    // this.classList.toggle("to-bottom")
     this.children[1].classList.toggle("bar-2-mini")
-    // Array.prototype.forEach.call(this.children, x => x.classList.toggle(x.classList[0] + "-mini"))
     this.nextElementSibling.classList.toggle("main-nav-extend")
 })
 
@@ -55,7 +52,12 @@ const smoothScroll = document.querySelector(".nav .container").addEventListener(
     }
 })
 
-// window.addEventListener("scroll", (x) => {
-//     const html = document.documentElement.scrollTop
-//     if (!html < 50) document.querySelector(".toTop").classList.add("show")
-// })
+
+document.forms[0].addEventListener('submit', function (e) {
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwVfEQVfZd17wcB38vRMNdJLHl2Sw0JadRZr9akD7T0NkI6QyCHYtwnxwvLU0cVUA9edA/exec"
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(this) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    this.reset()
+})

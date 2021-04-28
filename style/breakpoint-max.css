@@ -63,26 +63,6 @@
         height: auto;
         position: relative;
     }
-/* .mobile-btn::after {
-    content: "";
-    display: block;
-    top: 100%;
-    left: 50%;
-    margin-left: -0.5rem;
-    position: absolute;
-    border-width: .5rem;
-    border-style: solid;
-    border-color: #20c997 transparent transparent transparent;
-    opacity: 0;
-}
-
-.to-bottom::after {
-    animation: toBottom .4s forwards;
-}
-
-.to-top::after {
-    animation: toTop .4s forwards;
-} */
 
     @keyframes toBottom {
         from {
@@ -120,17 +100,9 @@
         transition: .4s;
     }
 
-    /* .mobile-btn .bar-1-mini {
-        width: 1.4rem;
-    } */
-
     .mobile-btn .bar-2-mini {
         width: 1.3rem;
     }
-
-    /* .mobile-btn .bar-3-mini {
-        width: 1.2rem;
-    } */
 
     .main-nav {
         height: 0;
