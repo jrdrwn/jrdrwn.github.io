@@ -1,2 +1,1 @@
-# personal-website-teal
-Personal Website
+# Personal Website
