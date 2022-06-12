@@ -1,158 +1,532 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jordi Irawan | Personal Website</title>
-
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/breakpoint-min.css">
-    <link rel="stylesheet" href="/style/breakpoint-max.css">
-    <link rel="stylesheet" href="/style/reset.css">
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/6dfed1c2b3.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <!-- Nav start -->
-    <nav class="nav">
-        <div class="container">
-            <div class="brand">Jordi Irawan</div>
-            <div class="mobile-btn to-top">
-                <span class="bar-1"></span>
-                <span class="bar-2"></span>
-                <span class="bar-3"></span>
-            </div>
-            <div class="main-nav">
-                <ul>
-                    <li><a href="#hero">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#hobby">hobby</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
+    <link
+      rel="shortcut icon"
+      href="/public/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body class="bg-light">
+    <!-- START HEADER -->
+    <header
+      class="bg-header fixed right-0 left-0 top-0 z-50 rounded-b-lg transition-all duration-300"
+    >
+      <div class="container flex items-center justify-between py-2 px-2">
+        <div id="brand-logo" class="brand-logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 38 29"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30.5078 2.94434C29.2773 3.13574 27.9512 3.44336 26.5293 3.86719C26.2422 3.94922 26.0098 3.99023 25.832 3.99023C25.4766 3.99023 25.2988 3.78516 25.2988 3.375C25.2988 3.11523 25.4766 2.90332 25.832 2.73926C26.666 2.3291 28.3545 1.89844 30.8975 1.44727C33.6045 0.955078 35.7305 0.708984 37.2754 0.708984C37.7539 0.708984 37.9932 0.893555 37.9932 1.2627C37.9932 1.52246 37.8633 1.7002 37.6035 1.7959C37.4395 1.87793 36.9541 1.95996 36.1475 2.04199C34.4932 2.21973 33.2764 2.54785 32.4971 3.02637C31.8682 3.38184 30.4395 4.76953 28.2109 7.18945C23.9863 11.8379 20.5068 16.0898 17.7725 19.9453C16.2275 22.1191 14.5664 24.6553 12.7891 27.5537C12.4199 28.1416 12.0576 28.4355 11.7021 28.4355C11.2783 28.4355 11.0254 28.251 10.9434 27.8818C10.875 27.6221 10.8408 27.3213 10.8408 26.9795C10.8408 25.4756 11.1621 22.9873 11.8047 19.5146C12.1738 17.4639 12.7139 15.0645 13.4248 12.3164C13.4932 12.0566 13.5273 11.8926 13.5273 11.8242C13.5273 11.6602 13.4521 11.5781 13.3018 11.5781C13.2197 11.5781 13.083 11.6875 12.8916 11.9062L12.748 12.0703C11.9414 12.9043 10.1436 15.3584 7.35449 19.4326C5.64551 21.9482 4.0459 24.5459 2.55566 27.2256C2.13184 27.9639 1.71484 28.333 1.30469 28.333C0.757812 28.333 0.484375 27.8955 0.484375 27.0205C0.484375 25.5303 0.689453 23.4385 1.09961 20.7451C1.64648 17.2588 2.48047 13.6562 3.60156 9.9375C4.29883 7.62695 5.00293 5.6582 5.71387 4.03125C4.96191 4.19531 4.19629 4.41406 3.41699 4.6875C2.22754 5.11133 1.52344 5.32324 1.30469 5.32324C0.949219 5.32324 0.771484 5.16602 0.771484 4.85156C0.771484 4.53711 0.962891 4.29102 1.3457 4.11328C2.67188 3.48438 4.46289 2.91699 6.71875 2.41113C8.93359 1.90527 10.8066 1.65234 12.3379 1.65234C12.9258 1.65234 13.2197 1.85742 13.2197 2.26758C13.2197 2.65039 12.9326 2.85547 12.3584 2.88281C10.5947 2.99219 9.50098 3.16309 9.07715 3.39551C8.69434 3.62793 8.37305 4.01074 8.11328 4.54395C7.25195 6.3623 6.21289 9.61621 4.99609 14.3057C4.09375 17.874 3.56055 20.7588 3.39648 22.96C5.70703 19.2686 8.44141 15.4199 11.5996 11.4141C13.8008 8.625 15.2227 6.92969 15.8652 6.32812C16.2344 5.97266 16.5488 5.79492 16.8086 5.79492C17.2871 5.79492 17.5264 6.05469 17.5264 6.57422C17.5264 6.7793 17.082 8.33789 16.1934 11.25C15.332 14.1484 14.6416 17.0742 14.1221 20.0273C13.8486 21.5312 13.6846 22.6592 13.6299 23.4111C14.8877 21.374 17.1846 18.2773 20.5205 14.1211C22.0654 12.1934 23.7471 10.1973 25.5654 8.13281C26.3311 7.27148 27.8145 5.70605 30.0156 3.43652L30.5078 2.94434Z"
+              fill="currentColor"
+              stroke="currentColor"
+              class="text-primary"
+            />
+          </svg>
         </div>
-    </nav>
-    <!-- Nav end -->
-
-    <!-- Hero start -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="left">
-                <a href="https://www.instagram.com/_jordirwn/"><i class="fab fa-instagram"></i></a>
-                <a href="https://discord.com/users/759931931084849152"><i class="fab fa-discord"></i></a>
-                <a href="https://t.me/jrdrwn"><i class="fab fa-telegram"></i></a>
-                <a href="https://twitter.com/_jordirwn"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="center">
-                <div class="hello">Hello</div>
-                <div class="name">I Am <span>Jordi Irawan</span></div>
-                <div class="tagline" target-write>Backend Develover</div>
-            </div>
-            <div class="right">scroll to</div>
+        <button id="mobile-button" class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+            width="2.5rem"
+            height="2.5rem"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 48 48"
+            class="hidden md:hidden"
+            id="close-btn"
+          >
+            <rect
+              x="0"
+              y="0"
+              width="48"
+              height="48"
+              fill="none"
+              stroke="none"
+            />
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="4"
+              d="m14 14l20 20m-20 0l20-20"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+            width="2.5rem"
+            height="2.5rem"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 48 48"
+            class="md:hidden"
+            id="show-btn"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="4"
+              d="M7.95 11.95h32m-32 12h32m-32 12h32"
+            />
+          </svg>
+        </button>
+        <div
+          id="mobile-navbar"
+          class="absolute -bottom-40 right-4 hidden rounded-2xl bg-white p-4 shadow"
+        >
+          <nav class="flex flex-col gap-5 text-center">
+            <a
+              href="#hero"
+              class="transition-colors duration-300 hover:text-primary"
+              >HOME</a
+            >
+            <a
+              href="#about"
+              class="transition-colors duration-300 hover:text-primary"
+              >ABOUT</a
+            >
+            <a
+              href="#contact"
+              class="transition-colors duration-300 hover:text-primary"
+              >CONTACT</a
+            >
+          </nav>
         </div>
+        <div id="navbar" class="hidden md:block">
+          <nav class="flex gap-5">
+            <a
+              href="#hero"
+              class="transition-colors duration-300 hover:text-primary"
+              >HOME</a
+            >
+            <a
+              href="#about"
+              class="transition-colors duration-300 hover:text-primary"
+              >ABOUT</a
+            >
+            <a
+              href="#contact"
+              class="transition-colors duration-300 hover:text-primary"
+              >CONTACT</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- START HERO -->
+    <section id="hero" class="mb-24 md:mb-14">
+      <div class="container flex flex-col px-2 pt-20 md:flex-row">
+        <div class="flex-1" id="hero-first-look">
+          <h2 class="mb-3 text-hero-headline font-medium">WELCOME!</h2>
+          <h1 class="mb-3 text-hero-title font-semibold text-primary">
+            I'm Jordi Irawan, A <br />
+            <span class="italic text-secondary">Backend Programmer</span>
+          </h1>
+          <p class="mb-6 text-hero-desc">
+            Currently studying at the University of Palangka Raya majoring in
+            <span class="italic">Informatics Engineering.</span>
+          </p>
+          <div class="hero-first-look-context flex flex-wrap gap-6">
+            <button
+              class="relative overflow-hidden rounded-tr-3xl rounded-bl-3xl bg-primary-container px-5 py-2 text-button font-medium text-on-primary-container before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-white before:opacity-0 before:transition-all before:duration-300 before:content-[''] hover:opacity-80 active:before:opacity-30"
+            >
+              Hire Me
+            </button>
+            <button
+              class="relative flex items-center gap-x-3 rounded-tr-3xl rounded-bl-3xl px-5 py-2 text-button text-on-primary-container transition-all duration-300 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-white before:opacity-0 before:transition-all before:duration-300 before:content-[''] hover:bg-primary-container hover:opacity-80 active:before:opacity-30"
+            >
+              <span>Learn more</span>
+              <svg
+                class="animate-bounce-to-right ml-1"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                role="img"
+                width="24"
+                height="24"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+              >
+                <rect
+                  x="0"
+                  y="0"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="none"
+                />
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="group flex-1 overflow-hidden rounded-tr-full rounded-bl-full border-primary bg-black bg-[url(/public/img/hero.jpg)] bg-cover bg-center md:border-2"
+          id="hero-second-look"
+        >
+          <a
+            href="https://www.vecteezy.com/free-vector/illustration"
+            class="block h-0 overflow-hidden text-white group-hover:h-fit"
+            >Illustration Vectors by Vecteezy</a
+          >
+        </div>
+      </div>
     </section>
-    <!-- Hero end -->
+    <!-- END HERO -->
 
-    <!-- About start -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-title">
-                <h3>About Me</h3>
-            </div>
+    <!-- START STATISTICS -->
+    <section id="statistics" class="mb-12">
+      <div class="container px-2">
+        <div id="statistics-exp" class="flex flex-wrap justify-around gap-5">
+          <div
+            class="flex h-48 w-48 flex-col items-center justify-between rounded-3xl bg-primary px-4 py-6 text-white shadow-md"
+          >
+            <div class="text-5xl font-bold">100+</div>
 
-            <div class="about-me">
-                <div class="about-me-title">hello, i am a <span>backend developer</span></div>
-                <hr>
-                <div class="about-me-description">Ya, inilah saya hanya manusia. Terima kasih.</div>
-                <div class="about-me-personal">
-                    <div>
-                        <span>Name:</span>Jordi Irawan
-                    </div>
-                    <div>
-                        <span>Birthday:</span>20th May 2004
-                    </div>
-                    <div>
-                        <span>Age:</span>16 Years
-                    </div>
-                    <div>
-                        <span>Email:</span>jordirwn@gmail.com
-                    </div>
-                </div>
-            </div>
-            <div class="about-logo"><img src="/asset/img/logo-jordi.png" alt="Jordi Irawan Logo"></div>
-            <div class="about-skill-bars">
-                <div class="bar python">Python<span>90%</span></div>
-                <div class="bar javascript">JavaScript<span>45%</span></div>
-                <div class="bar html">HTML<span>85%</span></div>
-                <div class="bar css">CSS<span>65%</span></div>
-            </div>
-            <div class="about-me-card-test">
-                <p>Let's start a Project!</p>
-            </div>
+            <div class="text-center text-2xl">Project Complete</div>
+          </div>
+          <div
+            class="flex h-48 w-48 flex-col items-center justify-between rounded-3xl bg-primary px-4 py-6 text-white shadow-md"
+          >
+            <div class="text-5xl font-bold">50+</div>
+
+            <div class="text-center text-2xl">Client</div>
+          </div>
+          <div
+            class="flex h-48 w-48 flex-col items-center justify-between rounded-3xl bg-primary px-4 py-6 text-white shadow-md"
+          >
+            <div class="text-5xl font-bold">2+</div>
+
+            <div class="text-center text-2xl">Years of Experience</div>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- About end -->
+    <!-- END STATISTICS -->
 
-    <!-- Hobby start -->
-    <section class="hobby" id="hobby">
-        <div class="container">
-            <div class="hobby-title">
-                <h3>My Hobby</h3>
+    <!-- START ABOUT -->
+    <section id="about" class="mb-12">
+      <div class="container px-2 pt-20">
+        <h1
+          class="relative z-10 mb-8 text-center text-3xl font-bold tracking-wide text-primary after:absolute after:left-0 after:right-0 after:bottom-0 after:text-5xl after:opacity-10"
+        >
+          ABOUT ME
+        </h1>
+        <div class="mb-3 flex flex-col md:flex-row">
+          <div class="mb-3 flex-1 md:mb-0">
+            <div
+              class="group relative mx-auto flex w-fit flex-col items-center overflow-hidden rounded-xl bg-white shadow-md"
+            >
+              <a
+                href="https://www.vecteezy.com/free-vector/astronaut"
+                class="absolute block h-0 overflow-hidden group-hover:h-fit"
+                >Astronaut Vectors by Vecteezy</a
+              >
+              <img
+                src="/public/img/about.png"
+                alt="Tomas Slebeww"
+                width="325"
+                height="325"
+                class="object-fill"
+              />
+              <p class="p-2">Jordi "Wan" Irawan - 18 y.o</p>
             </div>
-            <div class="hobby-card">
-                <i class="fas fa-book"></i>
-                <p>reading</p>
+          </div>
+          <div class="flex-1">
+            <p class="mb-3">
+              My name is Jordi Irawan, you can call me "Wan". I was born on May
+              20, 2004 in Lamunti Baru. I like reading, my favorite food is
+              fried rice, and my favorite color is green.
+            </p>
+            <p class="mb-3 font-light">
+              I am currently studying at the University of Palangka Raya
+              majoring in Informatics engineering and Freelancer at Fiverr.com
+            </p>
+            <p class="mb-5">If you want to contact me click the icon below:</p>
+            <div class="flex flex-wrap gap-y-2 gap-x-5">
+              <div class="rounded-lg bg-primary-container p-1">
+                <a href="https://www.instagram.com/_jrdrwan/" target="_blank">
+                  <svg
+                    role="img"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      class="text-on-primary-container"
+                      d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="rounded-lg bg-primary-container p-1">
+                <a
+                  target="_blank"
+                  href="https://discord.com/users/759931931084849152"
+                  ><svg
+                    role="img"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      class="text-on-primary-container"
+                      d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="rounded-lg bg-primary-container p-1">
+                <a href="https://github.com/jrdrwn" target="_blank">
+                  <svg
+                    role="img"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      class="text-on-primary-container"
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="rounded-lg bg-primary-container p-1">
+                <a href="mailto:jordirwn@gmail.com">
+                  <svg
+                    role="img"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      class="text-on-primary-container"
+                      d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="hobby-card">
-                <i class="fas fa-code"></i>
-                <p>coding</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-gamepad"></i>
-                <p>playing games</p>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- Hobby end -->
+    <!-- END ABOUT -->
 
-    <!-- Contact start -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-title">
-                <h3>
-                    Contact Me
-                </h3>
+    <!-- START HIRE ME -->
+    <section id="hire-me" class="mb-12 pt-10">
+      <div
+        class="container flex flex-wrap items-center justify-center gap-4 rounded-full bg-secondary-container p-4 text-on-secondary-container"
+      >
+        <h1 class="text-center text-3xl">Any project, cmon?</h1>
+        <button
+          class="relative overflow-hidden rounded-full bg-primary px-5 py-2 text-button font-medium text-on-primary before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-white before:opacity-0 before:transition-all before:duration-300 before:content-[''] hover:opacity-80 active:before:opacity-30"
+        >
+          HIRE ME
+        </button>
+      </div>
+    </section>
+    <!-- END HIRE ME -->
+
+    <!-- START CONTACT -->
+    <section id="contact" class="mb-12">
+      <div class="container px-2 pt-20">
+        <h1
+          class="relative z-10 mb-8 text-center text-3xl font-bold tracking-wide text-primary after:absolute after:left-0 after:right-0 after:bottom-0 after:text-5xl after:opacity-10"
+        >
+          CONTACT ME
+        </h1>
+        <div class="flex flex-col gap-y-8 md:flex-row">
+          <div class="flex flex-1 flex-col gap-4">
+            <div class="flex gap-2">
+              <div class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  width="32"
+                  height="32"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="none"
+                  />
+                  <g fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10c2.252 0 4.33-.744 6.001-2"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      d="M16 8v4c0 1 .6 3 3 3s3-2 3-3"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-lg font-bold">Email</span>
+                <span>jordirwn@gmail.com</span>
+              </div>
             </div>
-            <div class="side">
-                <div class="phone-number">
-                    <h4><i class="fas fa-phone"></i> Call Me</h4>
-                    <p>+62 823-4064-6756</p>
-                </div>
-                <div class="email">
-                    <h4><i class="far fa-envelope"></i> Email Me</h4>
-                    <p>jordirwn@gmail.com</p>
-                </div>
+            <div class="flex gap-2">
+              <div class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  width="32"
+                  height="32"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="none"
+                  />
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10.554 6.24L7.171 2.335c-.39-.45-1.105-.448-1.558.006L2.831 5.128c-.828.829-1.065 2.06-.586 3.047a29.207 29.207 0 0 0 13.561 13.58c.986.479 2.216.242 3.044-.587l2.808-2.813c.455-.455.456-1.174.002-1.564l-3.92-3.365c-.41-.352-1.047-.306-1.458.106l-1.364 1.366a.462.462 0 0 1-.553.088a14.557 14.557 0 0 1-5.36-5.367a.463.463 0 0 1 .088-.554l1.36-1.361c.412-.414.457-1.054.101-1.465Z"
+                  />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-lg font-bold">Call me</span>
+                <span>+62 823-4064-6756</span>
+              </div>
             </div>
-            <form>
-                <input type="text" name="username" id="username" placeholder="Name" autocomplete="off">
-                <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
-                <textarea name="message" id="message" cols="20" rows="5" placeholder="Message"></textarea>
-                <button type="submit">Send message</button>
+            <div class="flex gap-2">
+              <div class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  width="32"
+                  height="32"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="none"
+                  />
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="10" r="3" />
+                    <path
+                      d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-lg font-bold">Location</span>
+                <span>Palangka Raya, Central Kalimantan, Indonesian</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <form class="flex flex-col">
+              <label for="name" class="mt-4">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="rounded-full border-none bg-primary-container px-5 py-3 focus:ring-2 focus:ring-primary"
+                placeholder="Please input your name..."
+              />
+              <label for="email" class="mt-4">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="rounded-full border-none bg-primary-container px-5 py-3 focus:ring-2 focus:ring-primary"
+                placeholder="Please input your email..."
+              />
+              <label for="message" class="mt-4">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                class="mb-3 rounded-3xl border-none bg-primary-container px-5 py-3 focus:ring-2 focus:ring-primary"
+                placeholder="Please write your message for me..."
+              ></textarea>
+              <button
+                type="submit"
+                class="relative w-fit overflow-hidden rounded-full bg-primary px-5 py-2 text-button font-medium text-on-primary before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-white before:opacity-0 before:transition-all before:duration-300 before:content-[''] hover:opacity-80 active:before:opacity-30"
+              >
+                Send
+              </button>
             </form>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- Contact end -->
-    <footer class="footer">
-        <div class="container">
-            <h5>Copyright &copy; Jordi Irawan 2021. All right reserved.</h5>
-        </div>
-    </footer>
-    <script src="/js/main.js"></script>
-</body>
+    <!-- END CONTACT -->
 
+    <!-- START FOOTER -->
+    <footer class="bg-slate-900">
+      <div class="container p-4 text-center text-white">
+        © 2022 Jordi Irawan. All rights reserved.
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script src="/public/js/main.js"></script>
+  </body>
 </html>

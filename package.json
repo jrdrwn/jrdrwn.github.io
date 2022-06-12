@@ -1,0 +1,37 @@
+{
+  "name": "personal-website",
+  "version": "2.0.0",
+  "description": "A personal website",
+  "keywords": [
+    "personal-website",
+    "tailwindcss"
+  ],
+  "homepage": "https://github.com/jrdrwn/jrdrwn.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/jrdrwn/jrdrwn.github.io/issues",
+    "email": "jordirwn@gmail.com"
+  },
+  "author": "Jordi Irawan <jordirwn@gmail.com> (https://jrdrwn.github.io/)",
+  "license": "MIT",
+  "main": "./index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrdrwn/jrdrwn.github.io.git"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./src/style.css -o ./public/css/style.css --watch",
+    "prod": "tailwindcss -i ./src/style.css -o ./public/css/style.css --minify",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "tailwindcss": "^3.0.24"
+  },
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "private": true
+}

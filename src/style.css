@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  @keyframes bounce-to-right {
+    0%,
+    100% {
+      transform: translateX(-15%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-bounce-to-right {
+    animation: bounce-to-right 1s infinite;
+  }
+}
+
+@layer utilities {
+  .bg-light {
+    background: linear-gradient(
+        0deg,
+        rgba(96, 47, 248, 0.05),
+        rgba(96, 47, 248, 0.05)
+      ),
+      #fffbff;
+  }
+
+  .bg-header {
+    background: linear-gradient(
+        0deg,
+        rgba(96, 47, 248, 0.05),
+        rgba(96, 47, 248, 0.05)
+      ),
+      #fffbff;
+  }
+}
+
+.bg-header-on-scroll {
+  @apply bg-white shadow-md;
+}
+
+#about h1::after {
+  content: 'ABOUT ME' !important;
+}
+#contact h1::after {
+  content: 'CONTACT ME' !important;
+}
