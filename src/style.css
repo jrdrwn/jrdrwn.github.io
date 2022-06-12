@@ -48,10 +48,3 @@
 .bg-header-on-scroll {
   @apply bg-white shadow-md;
 }
-
-#about h1::after {
-  content: 'ABOUT ME' !important;
-}
-#contact h1::after {
-  content: 'CONTACT ME' !important;
-}
