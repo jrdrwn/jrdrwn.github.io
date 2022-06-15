@@ -21,19 +21,14 @@
   "scripts": {
     "dev": "npm run tailwind:watch",
     "prod": "npm run tailwind:minify && npm run minify",
-    "tailwind:watch": "tailwindcss -i ./src/css/style.css -o ./public/css/style.css --watch",
-    "tailwind:minify": "tailwindcss -i ./src/css/style.css -o ./public/css/style.css --minify",
+    "tailwind:watch": "tailwindcss -i ./src/style.css -o ./public/css/style.css --watch",
+    "tailwind:minify": "tailwindcss -i ./src/style.css -o ./public/css/style.css --minify",
     "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "minify": "node scripts/prod.mjs"
+    "format:check": "prettier . --check"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
-    "glob": "^8.0.3",
-    "live-server": "^1.2.2",
-    "minify": "^9.1.0",
-    "node-html-parser": "^5.3.3",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.11"
   },
