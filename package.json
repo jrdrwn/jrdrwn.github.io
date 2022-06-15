@@ -1,37 +1,48 @@
 {
-  "name": "personal-website",
+  "name": "blog-app",
   "version": "2.0.0",
-  "description": "A personal website",
+  "description": "A Blog app",
   "keywords": [
-    "personal-website",
+    "blog",
     "tailwindcss"
   ],
-  "homepage": "https://github.com/jrdrwn/jrdrwn.github.io#readme",
+  "homepage": "https://github.com/jrdrwn/blog-app#readme",
   "bugs": {
-    "url": "https://github.com/jrdrwn/jrdrwn.github.io/issues",
+    "url": "https://github.com/jrdrwn/blog-app/issues",
     "email": "jordirwn@gmail.com"
   },
   "author": "Jordi Irawan <jordirwn@gmail.com> (https://jrdrwn.github.io/)",
   "license": "MIT",
-  "main": "./index.html",
+  "main": "./public/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jrdrwn/jrdrwn.github.io.git"
+    "url": "https://github.com/jrdrwn/blog-app.git"
   },
   "scripts": {
-    "dev": "tailwindcss -i ./src/style.css -o ./public/css/style.css --watch",
-    "prod": "tailwindcss -i ./src/style.css -o ./public/css/style.css --minify",
+    "dev": "npm run tailwind:watch",
+    "prod": "npm run tailwind:minify && npm run minify",
+    "tailwind:watch": "tailwindcss -i ./src/css/style.css -o ./public/css/style.css --watch",
+    "tailwind:minify": "tailwindcss -i ./src/css/style.css -o ./public/css/style.css --minify",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "minify": "node scripts/prod.mjs"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.2",
+    "glob": "^8.0.3",
+    "live-server": "^1.2.2",
+    "minify": "^9.1.0",
+    "node-html-parser": "^5.3.3",
     "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "tailwindcss": "^3.0.24"
+    "prettier-plugin-tailwindcss": "^0.1.11"
   },
   "engines": {
     "node": ">=16.13.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "daisyui": "^2.15.3",
+    "tailwindcss": "^3.1.2"
+  }
 }
