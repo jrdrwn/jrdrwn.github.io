@@ -1,7 +1,7 @@
 {
   "name": "blog-app",
   "version": "2.1.7",
-  "description": "A Blog app",
+  "description": "A personal website that I created when there was no project from the backend.",
   "keywords": [
     "blog",
     "tailwindcss"
