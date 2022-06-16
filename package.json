@@ -14,7 +14,7 @@
   },
   "author": "Jordi Irawan <jordirwn@gmail.com> (https://jrdrwn.github.io/)",
   "license": "MIT",
-  "main": "./public/index.html",
+  "main": "./index.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/jrdrwn/jrdrwn.github.io.git"
