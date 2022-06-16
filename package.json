@@ -3,7 +3,8 @@
   "version": "2.1.7",
   "description": "A personal website that I created when there was no project from the backend.",
   "keywords": [
-    "blog",
+    "personal-website",
+    "daisy-ui",
     "tailwindcss"
   ],
   "homepage": "https://github.com/jrdrwn/jrdrwn.github.io#readme",
