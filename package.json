@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "npm run tailwind:watch",
-    "prod": "npm run tailwind:minify && npm run minify",
+    "prod": "npm run tailwind:minify",
     "tailwind:watch": "tailwindcss -i ./src/style.css -o ./public/css/style.css --watch",
     "tailwind:minify": "tailwindcss -i ./src/style.css -o ./public/css/style.css --minify",
     "format": "prettier . --write",
