@@ -16,3 +16,52 @@ A personal website that I created when there was no project from the backend.
 - Scrollpsy
 - Smooth Scroll
 - Responsive
+
+## Local Development
+
+Clone the project
+
+```bash
+  git clone https://github.com/jrdrwn/jrdrwn.github.io.git
+```
+
+Go to the project directory
+
+```bash
+  cd jrdrwn.github.io
+```
+
+Install dependencies
+
+```bash
+  npm install -D -P
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Production
+
+Before deploy you have to run this
+
+```bash
+  npm run build
+```
+
+You can also preview after build
+
+```bash
+  npm run preview
+```
+
+After that you can deploy in the `/dist` folder
+
+Learn more
+[Deploying A Static Site](https://vitejs.dev/guide/static-deploy.html#building-the-app)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
