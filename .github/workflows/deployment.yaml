@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: lts/gallium
           cache: "npm"
+        run: npm i -D
       - name: Build
         run: |
           npm run build
