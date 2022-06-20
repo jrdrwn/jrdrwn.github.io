@@ -10,6 +10,7 @@ jobs:
         with:
           node-version: lts/gallium
           cache: "npm"
+      - name: Install Packages
         run: npm i -D
       - name: Build
         run: |
