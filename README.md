@@ -8,6 +8,7 @@ A personal website that I created when there was no project from the backend.
 - [TailwindCSS](https://tailwindcss.com) as a CSS framework
 - [DaisyUI](https://daisyui.com) as a TailwindCSS plugin
 - [Google Spreadsheet](https://docs.google.com/spreadsheets) as backend for my site form
+- [Vite](https://vitejs.dev/) as build tool that aims to provide a faster and leaner development experience for modern web projects
 
 ## Features
 
