@@ -1,10 +1,5 @@
 on:
   workflow_dispatch:
-  push:
-    paths-ignore:
-      - ".*"
-      - "*.{json,md,js}"
-      - "LICENSE"
 jobs:
   publish:
     runs-on: ubuntu-latest

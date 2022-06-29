@@ -1,4 +1,11 @@
 @tailwind base;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -9,11 +16,13 @@
       transform: translateX(-15%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
+
     50% {
       transform: none;
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
   }
+
   .animate-bounce-to-right {
     animation: bounce-to-right 1s infinite;
   }
