@@ -1,12 +1,12 @@
 import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 import {
-  MdOutlineEmail,
   MdEmail,
+  MdLocationOn,
+  MdOutlineEmail,
+  MdOutlineLocationOn,
   MdOutlinePhone,
   MdPhone,
-  MdOutlineLocationOn,
-  MdLocationOn,
 } from 'react-icons/md';
 
 function ContactInfo({ icon, title, value, outlineIcon }) {
@@ -92,7 +92,7 @@ export default function ContactMe() {
         <h1 className="relative z-10 mb-4 text-center text-3xl font-bold tracking-wide text-primary after:absolute after:left-0 after:right-0 after:bottom-0 after:text-5xl after:opacity-10 after:content-['CONTACT_ME']">
           CONTACT ME
         </h1>
-        <h2 className="mb-8 text-center text-xl">
+        <h2 className="mb-8 text-center text-xl font-medium">
           DON'T BE SHY TO CONTACT ME :D
         </h2>
         <div className="flex flex-col gap-y-8 md:flex-row">

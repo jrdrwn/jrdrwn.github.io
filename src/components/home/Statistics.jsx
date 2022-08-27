@@ -1,4 +1,4 @@
-import { BiTask, BiHappy, BiMedal } from 'react-icons/bi';
+import { BiHappy, BiMedal, BiTask } from 'react-icons/bi';
 
 function StatisticsWrapper({ children }) {
   return (

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layout from './pages/Layout';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import Layout from './pages/Layout';
 import Technology from './pages/Technology';
 
 export default function App() {

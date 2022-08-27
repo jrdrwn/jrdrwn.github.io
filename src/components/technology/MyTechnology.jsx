@@ -1,11 +1,11 @@
-import python from '../../images/python.png';
-import js from '../../images/js.png';
-import html from '../../images/html.png';
 import css from '../../images/css.png';
-import react from '../../images/react.png';
-import vite from '../../images/vite.png';
-import tailwind from '../../images/tailwind.png';
+import html from '../../images/html.png';
+import js from '../../images/js.png';
 import node from '../../images/node.png';
+import python from '../../images/python.png';
+import react from '../../images/react.png';
+import tailwind from '../../images/tailwind.png';
+import vite from '../../images/vite.png';
 
 export default function MyTechnology() {
   const WEB_DEVELOPMENT = [
@@ -24,7 +24,7 @@ export default function MyTechnology() {
         <h1 className="relative z-10 mb-4 text-center text-3xl font-bold tracking-wide text-primary after:absolute after:left-0 after:right-0 after:bottom-0 after:text-5xl after:opacity-10 after:content-['TECHNOLOGY']">
           TECHNOLOGY
         </h1>
-        <h2 className="mb-8 text-center text-xl">
+        <h2 className="mb-8 text-center text-xl font-medium">
           These are some of the abilities I learned in the past 2 years
         </h2>
         <div className="mb-3 flex flex-col justify-center md:flex-row">

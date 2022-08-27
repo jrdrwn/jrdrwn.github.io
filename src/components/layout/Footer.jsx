@@ -1,4 +1,4 @@
-import { BsInstagram, BsDiscord, BsGithub } from 'react-icons/bs';
+import { BsDiscord, BsGithub, BsInstagram } from 'react-icons/bs';
 
 function FooterSocialBtn({ href, icon }) {
   return (

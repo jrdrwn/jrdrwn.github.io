@@ -1,9 +1,10 @@
 import { useWindowScroll } from '@mantine/hooks';
 import { useRef, useState } from 'react';
+import { CgClose, CgMenuRight } from 'react-icons/cg';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import useSwapTheme from '../../hooks/useSwapTheme';
-import { CgMenuRight, CgClose } from 'react-icons/cg';
+
 export default function Header() {
   const btnRef = useRef(null);
   const [{ y: windowScrollY }] = useWindowScroll();
@@ -36,7 +37,7 @@ export default function Header() {
         <div className="navbar-end">
           <div
             ref={btnRef}
-            className="mask swap mask-circle swap-rotate mr-2 bg-primary p-1 text-primary-content shadow-lg"
+            className="swap-rotate mask swap mask-circle mr-2 bg-primary p-1 text-primary-content shadow-lg"
             onClick={swapTheme}
           >
             <MdOutlineDarkMode size={24} className="swap-off" />
