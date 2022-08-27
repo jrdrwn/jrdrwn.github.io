@@ -49,7 +49,7 @@ function useModal() {
   ];
 }
 
-export default function Contact() {
+export default function ContactMe() {
   const [modal, setBody] = useModal();
   const [loading, setLoading] = useState(false);
 
@@ -87,8 +87,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="mb-12">
-      <div className="container px-4 pt-20">
+    <section className="mb-12">
+      <div className="container px-4">
         <h1 className="relative z-10 mb-4 text-center text-3xl font-bold tracking-wide text-primary after:absolute after:left-0 after:right-0 after:bottom-0 after:text-5xl after:opacity-10 after:content-['CONTACT_ME']">
           CONTACT ME
         </h1>
@@ -101,7 +101,7 @@ export default function Contact() {
               outlineIcon={<MdOutlineEmail size={36} />}
               icon={<MdEmail size={36} />}
               title="Email"
-              value="jordirwn@gmail"
+              value="jordirwn@gmail.com"
             />
             <ContactInfo
               outlineIcon={<MdOutlinePhone size={36} />}

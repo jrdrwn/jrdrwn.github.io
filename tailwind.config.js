@@ -9,10 +9,14 @@ module.exports = {
         center: true,
       },
       fontFamily: {
-        sans: ['Lato', ...defaultTheme.fontFamily.sans],
+        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+  ],
   daisyui: { darkTheme: 'night', themes: ['night', 'cupcake'] },
 };

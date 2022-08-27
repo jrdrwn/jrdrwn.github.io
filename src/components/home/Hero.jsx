@@ -1,5 +1,7 @@
 import HeroImg from '../../images/hero.webp';
 import { BsArrowRightCircle } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
     <section id="hero" className="mb-10 md:mb-24">
@@ -17,7 +19,9 @@ export default function Hero() {
             <span className="italic">Informatics Engineering.</span>
           </p>
           <div className="flex flex-wrap gap-6">
-            <button className="btn btn-primary">Hire Me</button>
+            <Link to={'/contact'} className="btn btn-primary">
+              Hire Me
+            </Link>
             <button className="btn btn-outline gap-2">
               Learn more
               <BsArrowRightCircle

@@ -1,16 +1,14 @@
 import { useWindowScroll } from '@mantine/hooks';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import useScrollspy from '../../hooks/useScrollspy';
+import { NavLink } from 'react-router-dom';
 import useSwapTheme from '../../hooks/useSwapTheme';
-
+import { CgMenuRight, CgClose } from 'react-icons/cg';
 export default function Header() {
   const btnRef = useRef(null);
   const [{ y: windowScrollY }] = useWindowScroll();
   const swapTheme = useSwapTheme(btnRef, { light: 'cupcake', dark: 'night' });
-
-  useScrollspy('active');
-
+  const [swap, setSwap] = useState(false);
   return (
     <header
       className={`fixed right-0 left-0 top-0 z-50 rounded-b-lg bg-opacity-90 backdrop-blur transition-all duration-300 ${
@@ -19,7 +17,7 @@ export default function Header() {
     >
       <div className="container navbar">
         <div className="navbar-start">
-          <a className="btn btn-ghost btn-sm" href="#">
+          <NavLink className="btn btn-ghost btn-sm" to={'/'}>
             <svg
               width="24"
               height="24"
@@ -33,7 +31,7 @@ export default function Header() {
                 className="text-primary"
               />
             </svg>
-          </a>
+          </NavLink>
         </div>
         <div className="navbar-end">
           <div
@@ -44,63 +42,33 @@ export default function Header() {
             <MdOutlineDarkMode size={24} className="swap-off" />
             <MdOutlineLightMode size={24} className="swap-on" />
           </div>
-          <div className="hidden lg:flex">
-            <ul className="menu menu-horizontal menu-compact gap-1 p-0">
-              <li>
-                <a href="#hero" className="active" data-scrollspy>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" data-scrollspy>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#contact" data-scrollspy>
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="dropdown dropdown-end">
-            <label tabIndex="0" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex="0"
-              className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow-md"
-            >
-              <li>
-                <a href="#hero" className="active" data-scrollspy>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" data-scrollspy>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#contact" data-scrollspy>
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+          <button
+            className={`swap-rotate mask swap mask-circle mr-2 bg-primary p-1 text-primary-content shadow-lg md:hidden ${
+              swap ? 'swap-active' : ''
+            }`}
+            onClick={() => setSwap(!swap)}
+          >
+            <CgMenuRight className="swap-off" size={24} />
+            <CgClose className="swap-on" size={24} />
+          </button>
+          <ul
+            className={`menu rounded-box menu-compact absolute -bottom-48 gap-2 bg-base-100 p-2 shadow-md transition-all md:menu-horizontal md:static md:bg-transparent md:p-0 md:shadow-none [&>li>a]:rounded [&>li>a]:uppercase ${
+              swap ? 'right-4' : '-right-36'
+            } `}
+          >
+            <li>
+              <NavLink to={'/'}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to={'/about'}>About</NavLink>
+            </li>
+            <li>
+              <NavLink to={'/technology'}>Technology</NavLink>
+            </li>
+            <li>
+              <NavLink to={'/contact'}>Contact</NavLink>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

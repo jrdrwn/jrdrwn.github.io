@@ -1,21 +1,22 @@
-import About from './components/layout/About';
-import Contact from './components/layout/Contact';
-import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
-import Hero from './components/layout/Hero';
-import HireMe from './components/layout/HireMe';
-import Statistics from './components/layout/Statistics';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Technology from './pages/Technology';
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <Statistics />
-      <About />
-      <HireMe />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/technology" element={<Technology />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

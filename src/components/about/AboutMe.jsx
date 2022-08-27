@@ -11,9 +11,9 @@ function AboutSocialBtn({ href, icon }) {
   );
 }
 
-export default function About() {
+export default function AboutMe() {
   return (
-    <section id="about" className="mb-12">
+    <section className="mb-12">
       <div className="container px-4 pt-20">
         <h1 className="relative z-10 mb-4 text-center text-3xl font-bold tracking-wide text-primary after:absolute after:left-0 after:right-0 after:bottom-0 after:text-5xl after:opacity-10 after:content-['ABOUT_ME']">
           ABOUT ME

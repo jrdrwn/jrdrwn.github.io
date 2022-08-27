@@ -21,7 +21,7 @@ function Statistic({ figure, title, value, desc }) {
 
 export default function Statistics() {
   return (
-    <section id="statistics" className="mb-12">
+    <section className="mb-12">
       <div className="container px-4 text-center">
         <StatisticsWrapper>
           <Statistic
