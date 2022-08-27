@@ -1,13 +1,13 @@
-import HeroImg from '../../images/hero.webp';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import HeroImg from '../../images/hero.webp';
 
 export default function Hero() {
   return (
     <section id="hero" className="mb-10 md:mb-24">
       <div className="container flex flex-col px-4 pt-20 md:flex-row">
         <div className="prose flex-1" id="hero-first-look">
-          <h2 className="text-lg font-medium">WELCOME!</h2>
+          <h2 className="text-xl font-medium">Let's begin the adventure!</h2>
           <h1 className="mr-2 mb-2 text-5xl font-semibold text-primary">
             I'm Jordi Irawan, A <br />
             <span className="text-5xl italic text-secondary">
