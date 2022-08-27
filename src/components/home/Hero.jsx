@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section id="hero" className="mb-10 md:mb-24">
       <div className="container flex flex-col px-4 pt-20 md:flex-row">
-        <div className="prose flex-1" id="hero-first-look">
+        <div className="prose flex-1">
           <h2 className="text-xl font-medium">Let's begin the adventure!</h2>
           <h1 className="mr-2 mb-2 text-5xl font-semibold text-primary">
             I'm Jordi Irawan, A <br />
@@ -31,10 +31,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div
-          className="hidden flex-1 text-center lg:block"
-          id="hero-second-look"
-        >
+        <div className="hidden flex-1 text-center lg:block">
           <a
             href="https://pngtree.com/so/Mobile"
             className="tooltip tooltip-bottom inline-block h-fit"
