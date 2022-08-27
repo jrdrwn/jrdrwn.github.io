@@ -22,13 +22,13 @@ export default function Hero() {
             <Link to={'/contact'} className="btn btn-primary">
               Hire Me
             </Link>
-            <button className="btn btn-outline gap-2">
+            <Link to={'/about'} className="btn btn-outline gap-2">
               Learn more
               <BsArrowRightCircle
                 size={24}
                 className="animate-bounce-to-right ml-1"
               />
-            </button>
+            </Link>
           </div>
         </div>
         <div
