@@ -14,9 +14,23 @@ export default function Hero() {
               Backend Programmer
             </span>
           </h1>
-          <p>
-            Currently studying at the University of Palangka Raya majoring in{' '}
-            <span className="italic">Informatics Engineering.</span>
+          <p className="font-medium">
+            Currently studying at the{' '}
+            <a
+              href="https://upr.ac.id/"
+              className="link-hover"
+              target={'_blank'}
+            >
+              University of Palangka Raya
+            </a>{' '}
+            majoring in{' '}
+            <a
+              href="https://informatics.upr.ac.id/"
+              className="link-hover italic"
+              target={'_blank'}
+            >
+              Informatics Engineering.
+            </a>
           </p>
           <div className="flex flex-wrap gap-6">
             <Link to={'/contact'} className="btn btn-primary">
